@@ -10,11 +10,11 @@ RUN groupadd tomcat
 RUN useradd -g tomcat tomcat
 
 RUN wget http://archive.apache.org/dist/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-8.5.27.tar.gz -O /opt/apache-tomcat-8.5.27.tar.gz \
-    && tar xvzf /opt/apache-tomcat-8.5.27.tar.gz -C /opt \
+    &&  tar xvzf /opt/apache-tomcat-8.5.27.tar.gz -C /opt \
     && mv /opt/apache-tomcat-8.5.27 /opt/tomcat \
     && rm -rf /opt/tar xvf apache-tomcat-8.5.27.tar.gz \
     && chown -R tomcat:tomcat /opt/tomcat
-##COPY tomcat-users.xml /opt/tomcat/conf
+#COPY tomcat-users.xml /opt/tomcat/conf
 EXPOSE 8080
 VOLUME /opt/tomcat/data
 WORKDIR /opt/tomcat
