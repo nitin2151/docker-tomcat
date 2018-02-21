@@ -2,7 +2,7 @@ FROM centos:latest
 
 RUN mkdir -p /usr/lib/jvm \
     && yum install wget -y \
-    && wget https://s3-ap-southeast-2.amazonaws.com/cloudsydney/java.tar.gz -O /opt/jdk-8u60-ea-bin-b17-linux-x64-26_may_2015.tar.gz \
+    && wget https://s3-us-west-2.amazonaws.com/nitindocker/java.tar.gz -O /opt/jdk-8u60-ea-bin-b17-linux-x64-26_may_2015.tar.gz \
     && tar xvzf /opt/jdk-8u60-ea-bin-b17-linux-x64-26_may_2015.tar.gz -C /usr/lib/jvm
 ENV JAVA_HOME /usr/lib/jvm/jdk1.8.0_60
 RUN groupadd tomcat 
